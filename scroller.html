@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Certificate Scroll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <style>
+        body {
+            background-image: url(./images/scroller-background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            backdrop-filter: blur(5px);
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+        }
+
+        center h3 {
+            color: #fff;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 50px;
+        }
+
+        .carousel {
+            height: 290px;
+            perspective: 250px;
+        }
+
+        .carousel .carousel-item {
+            width: 450px;
+            background: #fff;
+            padding: 25px;
+            height: 300px;
+            text-align: center;
+            border-radius: 25px;
+        }
+
+        .certificate-img-area {
+            width: 300px;
+            height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .certificate-img-area img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .testi p {
+            color: #262626;
+            font-size: 18px;
+        }
+
+        .testi h4 {
+            font-size: 20px;
+            margin: 0;
+            color: #000;
+        }
+
+        .testi h5 {
+            font-size: 14px;
+            letter-spacing: 5px;
+        }
+
+        @media (max-width: 500px) {
+            .carousel {
+                height: 300px;
+                perspective: 100px;
+            }
+
+            .carousel .carousel-item {
+                width: 60%;
+                padding: 15px;
+                height: 250px;
+            }
+
+            .certificate-img-area {
+                width: 100%;
+                height: 150px;
+                margin-bottom: 5px;
+            }
+
+            .certificate-img-area img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .testi p {
+                font-size: 16px;
+            }
+
+            .testi h4 {
+                font-size: 18px;
+            }
+
+            .testi h5 {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h3>Certificates</h3>
+    </center>
+    <div class="carousel">
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-infosys.jpg">
+                </div>
+                <h4>Frontend Web Development Bootcamp</h4>
+                <h5>Infosys</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-tcs.jpg">
+                </div>
+                <h4>TCS iON Career Edge - Young Professional</h4>
+                <h5>TCS iON</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-codechef.png">
+                </div>
+                <h4>Learn Java</h4>
+                <h5>CodeChef</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-codechef.png">
+                </div>
+                <h4>Learn SQL</h4>
+                <h5>CodeChef</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-ibm.jpg">
+                </div>
+                <h4>Project Management Fundamentals</h4>
+                <h5>IBM</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-microsoft.jpg">
+                </div>
+                <h4>Azure AI Engineer Associate</h4>
+                <h5>Microsft</h5>
+            </div>
+        </a>
+        <a class="carousel-item" href="#">
+            <div class="testi">
+                <div class="certificate-img-area">
+                    <img src="./images/certificate-oracle.jpg">
+                </div>
+                <h4>Databases for Developers: Foundations</h4>
+                <h5>Oracle</h5>
+            </div>
+        </a>
+
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel({
+                padding: 200
+            });
+            autoplay();
+            function autoplay() {
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>
